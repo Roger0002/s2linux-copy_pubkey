@@ -1,0 +1,14 @@
+---
+- name: Play copiador da chave pública do foreman-proxy
+  hosts: servidores_linux
+  become: True
+  tasks:
+    - name: Envia a chave pública do foreman proxy para as máquinas linux do parque
+      vars:
+        ansible_user: ansible
+        ansible_ssh_pass: ansible
+      authorized_key:
+        user: ansible
+        state: present
+        key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDoQ6QcMRuciVukl2aA2WKfJ4zK2fSio3YC0e9ARux3Mm2hOqZWMs5r+HRlzNhY+Do4Du07I3WBtyeB2XOQCsNQaNpagsuWN6RE//OUnm8CHO7IY1+2ITe1/x9nbe8peibHwHGnQ0ZM/vEE3dh8nHZmdC+Qtk4fFhtmpDxAoJi82mX8QgpgXyhC5qudo4+9QG4d+S4JV6obx2uQugK0enUlkgoiER1qqNyOpgx88q00tMzt5HeaUG5ImE4Lu3FzH1y7B5tZPCTZoT85tB+6KVsOl4p7VocuoMqvmAYuW0uY+Zpm0FlDhtqUoWrW9FlZxhxrn6RUneOOILcOB+N7MvAW7tJ6GNlzy/ILUcQjM+bokQS9Z+ySwIcohewNTTpWEDMmLpoF9TDBD7GR39Nfm39vCbtQ86SyVXDGAjcZujaikmS9mocm+bdnNM/lXfgzzdWPOVCXJhMRO0JZxJNTxTnGPTNKY+9xzxlx7og/aOMkhNkb0F1b1SPoJrzyDWDz8b8="
+
