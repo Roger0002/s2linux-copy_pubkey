@@ -1,0 +1,7 @@
+---
+- name: Play testador
+  hosts: servidores_linux
+  become: True
+  tasks:
+    - name: Teste
+      ping:
