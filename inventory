@@ -1,0 +1,10 @@
+[servidores_linux]
+clienterhel6.s2linux.local
+clienterhel7.s2linux.local
+clienterhel8.s2linux.local
+clienterhel9.s2linux.local
+idm.s2linux.local
+aap-control1.s2linux.local
+
+[servidores_windows]
+clientewin2022.s2linux.local
